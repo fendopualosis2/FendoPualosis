@@ -1,0 +1,10 @@
+const fs = require('fs');
+let code = fs.readFileSync('src/components/HomeSection.tsx', 'utf8');
+code = code.replace(/w-\[32rem\] h-\[44rem\]/, 'w-[36rem] h-[48rem]');
+code = code.replace(/left: "2%", top: "15%"/, 'left: "0%", top: "15%"');
+code = code.replace(/right: "2%", top: "15%"/, 'right: "0%", top: "15%"');
+code = code.replace(/left: "10%", top: "50%"/, 'left: "5%", top: "50%"');
+code = code.replace(/right: "10%", top: "50%"/, 'right: "5%", top: "50%"');
+code = code.replace(/left: "2%", top: "80%"/, 'left: "0%", top: "85%"');
+code = code.replace(/right: "2%", top: "80%"/, 'right: "0%", top: "85%"');
+fs.writeFileSync('src/components/HomeSection.tsx', code);
